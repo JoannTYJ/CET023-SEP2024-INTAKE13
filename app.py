@@ -3,8 +3,8 @@ import google.generativeai as genai
 import os
 
 model = genai.GenerativeModel("gemini-1.5-flash")
-ap1 - os.getenv("MAKERSUITE")
-genai.configure(api_key=api")
+api = os.getenv("MAKERSUITE")
+genai.configure(api_key=api)
 
 app = Flask(__name__)
 
@@ -32,11 +32,10 @@ def q1():
     return(render_template("q1_reply.html",r=r))
 
 @app.route("/q2",methods=["GET","POST"])
-@app.route("/q2",methods=["GET","POST"])
 def q2():
     q = request.form.get("q")
     r = model.generate_content(q)
     return(render_template("q2_reply.html",r=r))
 
 if __name__ == "__main__":
-    app.run(port=1234)
+    app.run()
