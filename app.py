@@ -7,7 +7,7 @@ import textblob
 #Hide 
 model = genai.GenerativeModel("gemini-1.5-flash")
 api = os.getenv("MAKERSUITE")
-genai.configure(api_key="AIzaSyBjRpF4Bu-DIpXs9DgQmKcDwIFIbEE0vfQ")
+genai.configure(api_key=api)
 
 app = Flask(__name__)
 
