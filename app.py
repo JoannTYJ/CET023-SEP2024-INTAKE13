@@ -3,7 +3,6 @@ import google.generativeai as genai
 import os
 import numpy as np
 import textblob
-
 #Hide 
 model = genai.GenerativeModel("gemini-1.5-flash")
 api = os.getenv("MAKERSUITE")
